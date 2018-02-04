@@ -1,6 +1,6 @@
 {
   "name": "rename-file",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Rename your file easily",
   "main": "index.js",
   "scripts": {
@@ -19,6 +19,6 @@
     "electron": "^1.7.12"
   },
   "dependencies": {
-    "minikuna": "^0.2.0"
+    "minikuna": "^0.3.0"
   }
 }
