@@ -1,7 +1,7 @@
 <div align="center">
 
 # Multiple Rename File
-![](rename-multiple-file.png)
+![](rename-multiple-file.png)  
 windows application made with electron to rename multiple file just at single click  
 ![release](https://img.shields.io/badge/version-0.1.0-orange.svg)
 </div>
