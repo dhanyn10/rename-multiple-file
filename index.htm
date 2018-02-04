@@ -1,0 +1,91 @@
+<html>
+<head>
+    <link rel="stylesheet" href="node_modules/minikuna/css/style/global.css">
+    <link rel="stylesheet" href="node_modules/minikuna/css/style/grid.css">
+    <link rel="stylesheet" href="node_modules/minikuna/css/style/container.css">
+    <link rel="stylesheet" href="node_modules/minikuna/css/component/navbar.css">
+    <link rel="stylesheet" href="node_modules/minikuna/css/component/form.css">
+    <link rel="stylesheet" href="node_modules/minikuna/css/component/card.css">
+    <link rel="stylesheet" href="node_modules/minikuna/css/component/button.css">
+</head>
+<body>
+    <nav class="nav nav-g-sm bg-blue nav-sm">
+        <div class="brand">
+            <a class="nav-brand-text text-white" href="index.htm">Rename multiple file at once</a>
+        </div>
+        <ul class="navbar navnav right text-white">
+            <li class="nav-item">
+                <a class="nav-link" href="https://github.com/dhanyn10/rename-multiple-file.git">Github</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.htm">About</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="jumper-3"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <input type="text" id="location" class="form g-lg-12" placeholder="set folder location example: C:\User\dhany"/>
+        </div>
+        <div class="jumper-2"></div>
+        <div class="row">
+            <div class="card block">
+                <div class="card-header bg-blue text-white">Option</div>
+                <div class="card-content">
+                    <div class="card-content-text">
+                        <div class="form-wrap">
+                            <div class="g-sm-6">
+                                <label class="block" for=""><input type="radio" checked name="rename" value="1" id="">delete character</label>
+                            </div>
+                            <div class="g-sm-6">
+                                <div class="row">
+                                    <div class="g-lg-12">
+                                        <input type="text" name="delete-character" class="form block" placeholder="type here" id="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-wrap">
+                            <div class="g-sm-6">
+                                <label class="block" for=""><input type="radio" name="rename" value="2" id="">Substring</label>
+                            </div>
+                            <div class="g-sm-6">
+                                <div class="row">
+                                    <div class="g-sm-6">
+                                        <input type="text" name="substring-start" placeholder="start(index)" class="form block" id="">
+                                    </div>
+                                    <div class="g-sm-6">
+                                        <input type="text" name="substring-end" placeholder="end(index)" class="form block" id="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-wrap">
+                            <div class="g-sm-6">
+                                <label class="block" for=""><input type="radio" name="rename" value="3" id="">Replace</label>
+                            </div>
+                            <div class="g-sm-6">
+                                <div class="row">
+                                    <div class="g-sm-6">
+                                        <input type="text" name="find" placeholder="find" class="form block" id="">
+                                    </div>
+                                    <div class="g-sm-6">
+                                        <input type="text" name="with" placeholder="with" class="form block" id="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="jumper-2"></div>
+        <div class="g-lg-12">
+            <center>
+                <button class="btn btn-lg bg-red btn-blunt text-white" id="execute">EXECUTE</button>
+            </center>
+        </div>
+    </div>
+    <script src="rename.js"></script>
+</body>
+</html>

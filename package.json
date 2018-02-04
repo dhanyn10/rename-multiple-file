@@ -1,0 +1,24 @@
+{
+  "name": "rename-file",
+  "version": "0.1.0",
+  "description": "Rename your file easily",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "package-win": "electron-packager . rename-file --overwrite --asar=true --platform=win32 --arch=ia32 --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Rename File\""
+  },
+  "keywords": [
+    "rename",
+    "file",
+    "nodejs",
+    "electron"
+  ],
+  "author": "Dhany Nurdiansyah",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^1.7.12"
+  },
+  "dependencies": {
+    "minikuna": "^0.2.0"
+  }
+}
