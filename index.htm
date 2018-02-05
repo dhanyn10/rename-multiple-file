@@ -59,10 +59,25 @@
                             <div class="g-sm-8">
                                 <div class="row">
                                     <div class="g-sm-6">
-                                        <input type="text" name="find" placeholder="find" class="form block" id="">
+                                        <input type="text" name="replace-find" placeholder="find" class="form block">
                                     </div>
                                     <div class="g-sm-6">
-                                        <input type="text" name="with" placeholder="with" class="form block" id="">
+                                        <input type="text" name="replace-with" placeholder="with" class="form block">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-wrap">
+                            <div class="g-sm-4">
+                                <label class="block"><input type="radio" checked class="form" name="rename" value="4">Insert</label>
+                            </div>
+                            <div class="g-sm-8">
+                                <div class="row">
+                                    <div class="g-lg-6">
+                                        <input type="text" name="insert-before" class="form block" placeholder="before">
+                                    </div>
+                                    <div class="g-lg-6">
+                                        <input type="text" name="insert-after" class="form block" placeholder="after">
                                     </div>
                                 </div>
                             </div>
@@ -74,10 +89,13 @@
         <div class="jumper-2"></div>
         <div class="g-lg-12">
             <center>
-                <button class="btn btn-lg bg-red btn-blunt text-white" id="execute">EXECUTE</button>
+                <button class="btn btn-lg bg-red btn-blunt text-white" id="execute">Go!</button>
             </center>
         </div>
+        
+        </div>
     </div>
+
     <script src="rename.js"></script>
 </body>
 </html>
