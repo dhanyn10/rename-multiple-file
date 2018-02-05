@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="node_modules/minikuna/css/component/form.css">
     <link rel="stylesheet" href="node_modules/minikuna/css/component/card.css">
     <link rel="stylesheet" href="node_modules/minikuna/css/component/button.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="nav nav-g-sm bg-blue nav-sm">
@@ -97,7 +98,13 @@
     <div class="g-md-3" style="height:calc(100% - 44px);max-height:calc(100% - 44px); overflow:auto;border-left:1px dashed #E0E0E0" id="status">
         <input type="hidden" id="success-count" value="0">
             <button class="btn btn-sm bg-dark block text-white" id="clear-status" style="visibility:hidden">CLEAR STATUS</button>
-        <div id="result-status"></div>
+        <div id="result-status">
+            <h6 id="note-status" class="text-dark">
+                application action status
+                <br/>
+                will displayed here
+            </h6>
+        </div>
     </div>
     <script src="rename.js"></script>
 </body>

@@ -1,0 +1,10 @@
+#result-status
+{
+    position: relative;
+}
+#note-status
+{
+    margin-top:50%;
+    text-align: center;
+    user-select: none;
+}

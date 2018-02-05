@@ -1,4 +1,5 @@
 document.getElementById('execute').addEventListener('click', function(){
+    document.getElementById('result-status').innerHTML = null;
     var location  = document.getElementById('location').value;
     var rename    = document.getElementsByName('rename');
     for(i = 0; i < rename.length; i++)
@@ -122,7 +123,12 @@ document.getElementById('execute').addEventListener('click', function(){
     },500);
 });
 document.getElementById('clear-status').addEventListener('click', function(){
-    document.getElementById('result-status').innerHTML = null;
+    document.getElementById('result-status').innerHTML = 
+        '<h6 id="note-status" class="text-dark">' +
+            'application action status' +
+            '<br/>' +
+            'will displayed here' +
+        '</h6>';
     document.getElementById('clear-status').style.visibility = "hidden";
 });
 window.onerror = function(error, url, line) {
