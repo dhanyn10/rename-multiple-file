@@ -27,10 +27,9 @@ document.getElementById('execute').addEventListener('click', function(){
         {
             document.getElementById("result-status").innerHTML =
             '<div class="card">' +
-                '<div class="card-header bg-red text-white">Error</div>' +
+                '<div class="card-header bg-red static text-white">Error</div>' +
                 '<div class="card-content">' +
                     '<div class="card-content-text" style="word-wrap:break-word;">' +
-                        'Error Message : <br/>' +
                         '<pre>' +
                             '<code style="overflow:auto">' +
                                 err +
@@ -39,6 +38,7 @@ document.getElementById('execute').addEventListener('click', function(){
                     '</div>' +
                 '</div>' +
             '</div>' +
+            '<div class="block" style="margin-bottom:2px"></div>' +
             document.getElementById("result-status").innerHTML;
         }
     
@@ -84,11 +84,10 @@ document.getElementById('execute').addEventListener('click', function(){
                 {
                     document.getElementById("result-status").innerHTML =
                     '<div class="card">' +
-                        '<div class="card-header bg-red text-white">Error</div>' +
+                        '<div class="card-header bg-red static text-white">Error</div>' +
                         '<div class="card-content">' +
                             '<div class="card-content-text" style="word-wrap:break-word;">' +
                                 'Filename : ' + filename + "<br/>" +
-                                'Error Message : <br/>' +
                                 '<pre>' +
                                     '<code style="overflow:auto">' +
                                         err +
@@ -97,6 +96,7 @@ document.getElementById('execute').addEventListener('click', function(){
                             '</div>' +
                         '</div>' +
                     '</div>' +
+                    '<div class="block" style="margin-bottom:2px"></div>' +
                     document.getElementById("result-status").innerHTML;
                 }
                 else
@@ -115,16 +115,17 @@ document.getElementById('execute').addEventListener('click', function(){
         if(successcount > 0)
         {
             var alertsuccess = 
-            '<div class="alert block alert-sm bg-blue text-white">' +
+            '<div class="alert block alert-sm bg-blue static text-white">' +
                 'Success ['+ successcount + ']' +
-            '</div>';
+            '</div>' +
+            '<div class="block" style="margin-bottom:2px"></div>';
             document.getElementById("result-status").innerHTML = alertsuccess + document.getElementById("result-status").innerHTML;
         }
     },500);
 });
 document.getElementById('clear-status').addEventListener('click', function(){
     document.getElementById('result-status').innerHTML = 
-        '<h6 id="note-status" class="text-dark">' +
+        '<h6 id="note-status" class="text-dark static">' +
             'application action status' +
             '<br/>' +
             'will displayed here' +
@@ -134,10 +135,9 @@ document.getElementById('clear-status').addEventListener('click', function(){
 window.onerror = function(error, url, line) {
     var alerterror = 
         '<div class="card">' +
-            '<div class="card-header bg-red text-white">Error</div>' +
+            '<div class="card-header bg-red static text-white">Error</div>' +
             '<div class="card-content">' +
                 '<div class="card-content-text" style="word-wrap:break-word;">' +
-                    'Error Message : <br/>' +
                     '<pre>' +
                         '<code style="overflow:auto">' +
                             error +
@@ -145,6 +145,7 @@ window.onerror = function(error, url, line) {
                     '</pre>' +
                 '</div>' +
             '</div>' +
-        '</div>';
+        '</div>' +
+        '<div class="block" style="margin-bottom:2px"></div>';
         document.getElementById("result-status").innerHTML = alerterror + document.getElementById("result-status").innerHTML;
 };
