@@ -21,35 +21,38 @@ document.getElementById('execute').addEventListener('click', function(){
       return;
     }
     
-    newfile     = "";
-    deletechar  = "";
-    start       = 0;
-    end         = 0;
-    changefind  = "";
-    changewith  = "";
-
-    deletechar  = document.getElementsByName('delete-character')[0].value;
-    start       = document.getElementsByName('substring-start')[0].value;
-    end         = document.getElementsByName('substring-end')[0].value;
-    changefind  = document.getElementsByName('find')[0].value;
-    changewith  = document.getElementsByName('with')[0].value;
+    newfile       = "";
+    deletechar    = document.getElementsByName('delete-character')[0].value;
+    start         = document.getElementsByName('substring-start')[0].value;
+    end           = document.getElementsByName('substring-end')[0].value;
+    changefind    = document.getElementsByName('find')[0].value;
+    changewith    = document.getElementsByName('with')[0].value;
+    insertbefore  = document.getElementsByName('insert-before')[0].value;
+    insertafter   = document.getElementsByName('insert-after')[0].value;
 
     files.forEach(function (filename) {
-      fileextension = filename.split(".");
-      fileextension = "." + fileextension[fileextension.length-1];
+      arrname       = filename.split(".");
+      //assumtion file name including extension has written like as follow
+      //loremipsum.pdf
+      filenameonly  = arrname[0];
+      fileextension = "." + arrname[arrname.length-1];
 
     if(option == 1)
     {
       newfile = filename.replace(deletechar, "");
     }
-    else if(option == 2)
+    if(option == 2)
     {
       newfile = filename.substring(start, end);
       newfile += fileextension;
     }
-    else if(option == 3)
+    if(option == 3)
     {
       newfile = filename.replace(changefind, changewith);
+    }
+    if(option == 4)
+    {
+      newfile = insertbefore + filenameonly + insertafter + fileextension;
     }
       fs.rename(fulldir + filename, fulldir + newfile, function (err) {
         if (err)
