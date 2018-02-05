@@ -1,3 +1,8 @@
+.static
+{
+    user-select: none;
+    cursor: default;
+}
 #result-status
 {
     position: relative;
@@ -6,5 +11,4 @@
 {
     margin-top:50%;
     text-align: center;
-    user-select: none;
 }
