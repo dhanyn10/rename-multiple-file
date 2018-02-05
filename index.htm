@@ -3,6 +3,7 @@
     <link rel="stylesheet" href="node_modules/minikuna/css/style/global.css">
     <link rel="stylesheet" href="node_modules/minikuna/css/style/grid.css">
     <link rel="stylesheet" href="node_modules/minikuna/css/style/container.css">
+    <link rel="stylesheet" href="node_modules/minikuna/css/component/alert.css">
     <link rel="stylesheet" href="node_modules/minikuna/css/component/navbar.css">
     <link rel="stylesheet" href="node_modules/minikuna/css/component/form.css">
     <link rel="stylesheet" href="node_modules/minikuna/css/component/card.css">
@@ -14,8 +15,8 @@
             Rename multiple file at once
         </div>
     </nav>
-    <div class="jumper-3"></div>
-    <div class="container-fluid">
+    <div class="g-md-9">
+        <div class="jumper-3"></div>
         <div class="row">
             <input type="text" id="location" class="form g-lg-12" placeholder="set folder location example: C:\User\dhany\"/>
         </div>
@@ -92,6 +93,11 @@
                 <button class="btn btn-lg bg-red btn-blunt text-white" id="execute">Go!</button>
             </center>
         </div>
+    </div>
+    <div class="g-md-3" style="height:calc(100% - 44px);max-height:calc(100% - 44px); overflow:auto;border-left:1px dashed #E0E0E0" id="status">
+        <input type="hidden" id="success-count" value="0">
+            <button class="btn btn-sm bg-dark block text-white" id="clear-status" style="visibility:hidden">CLEAR STATUS</button>
+        <div id="result-status"></div>
     </div>
     <script src="rename.js"></script>
 </body>
