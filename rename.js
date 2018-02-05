@@ -15,8 +15,16 @@ document.getElementById('execute').addEventListener('click', function(){
     fs.readdir(fulldir, function (err, files) {
         if (err)
         {
-            console.log('err', err);
-            return;
+            document.getElementById("result-status").innerHTML =
+            '<div class="card">' +
+                '<div class="card-header bg-red text-white">Error</div>' +
+                '<div class="card-content">' +
+                    '<div class="card-content-text" style="word-wrap:break-word;">' +
+                        'Error Message : '+ err +
+                    '</div>' +
+                '</div>' +
+            '</div>' +
+            document.getElementById("result-status").innerHTML;
         }
     
         document.getElementById('success-count').value = 0;
@@ -59,17 +67,17 @@ document.getElementById('execute').addEventListener('click', function(){
             {
                 if (err)
                 {
-                    document.getElementById("result-status").innerHTML +=
-                    '<div class="card">'+
-                        '<div class="card-header bg-red">Error!</div>'+
-                        '<div class="card-content">'+
-                            '<div class="card-content-body">'+
-                                'Filename : ' + filename + "<br/>"+
-                                'Error : ' + err +
-                            '</div>'+
-                        '</div>'+
-                    '</div>';
-                    return;
+                    document.getElementById("result-status").innerHTML =
+                    '<div class="card">' +
+                        '<div class="card-header bg-red text-white">Error</div>' +
+                        '<div class="card-content">' +
+                            '<div class="card-content-text" style="word-wrap:break-word;">' +
+                                'Filename : ' + filename + "<br/>" +
+                                'Error Message : ' + err +
+                            '</div>' +
+                        '</div>' +
+                    '</div>' +
+                    document.getElementById("result-status").innerHTML;
                 }
                 else
                 {
@@ -87,10 +95,10 @@ document.getElementById('execute').addEventListener('click', function(){
         if(successcount > 0)
         {
             var alertsuccess = 
-            '<div class="alert block alert-sm bg-blue text-white">'+
+            '<div class="alert block alert-sm bg-blue text-white">' +
                 'Success ['+ successcount + ']' +
             '</div>';
-            document.getElementById("result-status").innerHTML += alertsuccess;
+            document.getElementById("result-status").innerHTML = alertsuccess + document.getElementById("result-status").innerHTML;
         }
     },500);
 });
