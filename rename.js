@@ -8,9 +8,18 @@ document.getElementById('execute').addEventListener('click', function(){
             option = rename[i].value;
         }
     }
-    var fs        = require('fs');
-    location      = location.replace(/\\/g, "/");
-    var fulldir   = location;
+    var fs          = require('fs');
+    location        = location.replace(/\\/g, "/");
+
+    //insert forward slash to reduce user mistake in writting a slash
+    loclength       = location.length;
+    loclastindex    = location.substring(loclength-1, loclength);
+    if(loclastindex != "/")
+    {
+        location += "/";
+    }
+
+    var fulldir     = location;
 
     fs.readdir(fulldir, function (err, files) {
         if (err)
@@ -20,7 +29,12 @@ document.getElementById('execute').addEventListener('click', function(){
                 '<div class="card-header bg-red text-white">Error</div>' +
                 '<div class="card-content">' +
                     '<div class="card-content-text" style="word-wrap:break-word;">' +
-                        'Error Message : '+ err +
+                        'Error Message : <br/>' +
+                        '<pre>' +
+                            '<code style="overflow:auto">' +
+                                err +
+                            '</code>' +
+                        '</pre>' +
                     '</div>' +
                 '</div>' +
             '</div>' +
@@ -73,7 +87,12 @@ document.getElementById('execute').addEventListener('click', function(){
                         '<div class="card-content">' +
                             '<div class="card-content-text" style="word-wrap:break-word;">' +
                                 'Filename : ' + filename + "<br/>" +
-                                'Error Message : ' + err +
+                                'Error Message : <br/>' +
+                                '<pre>' +
+                                    '<code style="overflow:auto">' +
+                                        err +
+                                    '</code>' +
+                                '</pre>' +
                             '</div>' +
                         '</div>' +
                     '</div>' +
@@ -106,3 +125,20 @@ document.getElementById('clear-status').addEventListener('click', function(){
     document.getElementById('result-status').innerHTML = null;
     document.getElementById('clear-status').style.visibility = "hidden";
 });
+window.onerror = function(error, url, line) {
+    var alerterror = 
+        '<div class="card">' +
+            '<div class="card-header bg-red text-white">Error</div>' +
+            '<div class="card-content">' +
+                '<div class="card-content-text" style="word-wrap:break-word;">' +
+                    'Error Message : <br/>' +
+                    '<pre>' +
+                        '<code style="overflow:auto">' +
+                            error +
+                        '</code>' +
+                    '</pre>' +
+                '</div>' +
+            '</div>' +
+        '</div>';
+        document.getElementById("result-status").innerHTML = alerterror + document.getElementById("result-status").innerHTML;
+};
