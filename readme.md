@@ -14,4 +14,4 @@ this project is open contribution from everyone
 Simply download this application <a href="https://drive.google.com/file/d/1dYcG1FuDvfuw0LUHyWTgIyTKpk4kZjln/view?usp=sharing">here</a>
   
 ## License
-this project is developed under [MIT License](https://github.com/dhanyn10/minikuna/blob/master/LICENSE)
+this project is developed under [MIT License](LICENSE)
