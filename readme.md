@@ -1,7 +1,7 @@
 <div align="center">
 
 # Multiple Rename File
-windows application made with electron to rename multiple file just by single click  
+:open_file_folder: windows application made with electron to rename multiple file that has the same name just by single click  
 ![release](https://img.shields.io/badge/build-passing-green.svg) 
 ![release](https://img.shields.io/badge/coverage-90%25-green.svg) 
 ![release](https://img.shields.io/badge/version-0.1.1-orange.svg) 
