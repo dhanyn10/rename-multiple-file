@@ -13,7 +13,8 @@ function createWindow () {
         height: 600,
         center: true,
         minWidth: 700,
-        minHeight: 500
+        minHeight: 500,
+        icon: 'rename-multiple-file.ico'
     })
 
     // and load the index.html of the app.
