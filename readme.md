@@ -8,7 +8,7 @@ windows application made with electron to rename multiple file that has the same
 </div>
 
 ## Contribution
-this project is open contribution from everyone  
+Do you find bug? or have feature request? then let's open new [issues](https://github.com/dhanyn10/rename-multiple-file).
 
 ## How to Use
 Simply download this application <a href="https://drive.google.com/file/d/1dYcG1FuDvfuw0LUHyWTgIyTKpk4kZjln/view?usp=sharing">here</a>
