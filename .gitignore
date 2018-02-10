@@ -1,2 +1,4 @@
 /node_modules
 /release-builds
+/rename-multiple-file-win32-ia32
+/installer
