@@ -1,6 +1,6 @@
 <div align="center">
 
-# Multiple Rename File
+# Rename Multiple File
 windows application made with electron to rename multiple file that has the same name just by single click  
 ![release](https://img.shields.io/badge/build-passing-green.svg) 
 ![release](https://img.shields.io/badge/coverage-90%25-green.svg) 
