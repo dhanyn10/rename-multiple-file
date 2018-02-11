@@ -9,11 +9,11 @@ let win
 function createWindow () {
     // Create the browser window.
     win = new BrowserWindow({
-        width: 900,
-        height: 600,
+        width: 800,
+        height: 450,
         center: true,
-        minWidth: 700,
-        minHeight: 500,
+        minWidth: 800,
+        minHeight: 450,
         icon: 'rename-multiple-file.ico'
     })
 
