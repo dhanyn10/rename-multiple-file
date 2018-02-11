@@ -1,11 +1,11 @@
 {
   "name": "rename-multiple-file",
-  "version": "0.3.0",
+  "version": "0.2.1",
   "description": "windows application made with electron to rename multiple file with the same name just by single click",
   "main": "index.js",
   "scripts": {
     "start": "electron .",
-    "package-win": "electron-packager . rename-multiple-file --platform=win32 --arch=ia32 --icon=rename-multiple-file.ico  --version-string.CompanyName=DhanyN --version-string.FileDescription=DhanyN --version-string.ProductName=\"Rename Multiple File\""
+    "package-win": "electron-packager . rename-multiple-file --overwrite --asar=true --platform=win32 --arch=ia32 --icon=rename-multiple-file.ico  --version-string.CompanyName=DhanyN --version-string.FileDescription=DhanyN --version-string.ProductName=\"Rename Multiple File\""
   },
   "keywords": [
     "file",
@@ -15,11 +15,9 @@
   "author": "Dhany Nurdiansyah",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^1.7.12",
-    "electron-winstaller": "^2.6.4"
+    "electron": "^1.8.2"
   },
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.0",
-    "minikuna": "^0.3.0"
+    "minikuna": "^0.4.0"
   }
 }
