@@ -1,6 +1,6 @@
 {
   "name": "Rename_Multiple_File",
-  "version": "0.2.2",
+  "version": "1.0.0",
   "description": "windows application made with electron to rename multiple file with the same name just by single click",
   "main": "index.js",
   "scripts": {
