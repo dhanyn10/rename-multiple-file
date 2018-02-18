@@ -3,3 +3,4 @@
 /rename-multiple-file-win32-ia32
 /installer
 package-lock.json
+yarn.lock
